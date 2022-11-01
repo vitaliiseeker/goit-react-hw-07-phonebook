@@ -82,3 +82,8 @@ export const Footer = styled.footer`
   padding: 6px 12px;
   border-top: 3px solid #c0c0c0;
 `;
+
+export const Wrap = styled.div`
+  flex-grow: 1;
+  border-radius: 10px;
+`;

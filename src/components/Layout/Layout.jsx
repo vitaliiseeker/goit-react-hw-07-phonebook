@@ -1,8 +1,8 @@
 import { Suspense } from "react";
 import { Outlet, NavLink } from 'react-router-dom';
-import { Container } from "../Container/Container";
-import { Loader } from "../Loader/Loader";
-import { Nav, List, Item, LinkNav, Footer, GithubLogo } from './Layout.styled';
+import { Container } from "components/Container/Container";
+import { Loader } from "components/Loader/Loader";
+import { Nav, List, Item, LinkNav, Footer, GithubLogo, Wrap } from './Layout.styled';
 
 export const Layout = () => {
   return (
@@ -24,13 +24,13 @@ export const Layout = () => {
             <GithubLogo width="50" height="50" />
           </NavLink>
         </Nav>
-        <div style={{ flexGrow: 1 }}>
+        <Wrap>
           <Suspense fallback={<Loader />}>
             <Outlet />
           </Suspense>
-        </div>
+        </Wrap>
         <Footer>
-          <p>&copy; 2022 | All Rights Reserved</p>
+          <p>&copy; 2022 | All Rights Reserved ⚡️</p>
         </Footer>
       </Container>
     </>

@@ -6,8 +6,8 @@ export const TotalNumberContacts = ({ value }) => (
 
   <>
     {value ?
-      <Text>Total number of contacts
-        <Total>{value}</Total>contacts
+      <Text>The total number of contacts in the phone book:
+        <Total>{value}</Total>contacts.
       </Text>
       :
       <Text>There are no entries in the phone book of contacts.</Text>}
