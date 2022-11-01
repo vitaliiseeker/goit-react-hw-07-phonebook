@@ -18,6 +18,7 @@ import {
   Link,
   IconSvgLink,
 } from './ContactList.styled';
+import PropTypes from 'prop-types';
 
 export const ContactList = ({ changeContact }) => {
   const contacts = useSelector(selectContacts);
@@ -75,3 +76,7 @@ export const ContactList = ({ changeContact }) => {
     </>
   );
 };
+
+ContactList.propTypes = {
+  changeContact: PropTypes.func.isRequired,
+}

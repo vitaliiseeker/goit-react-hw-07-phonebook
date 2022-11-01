@@ -5,6 +5,7 @@ import { addContact, updateContact } from 'redux/contacts/contactsOperations';
 import { Button } from 'components/Button/Button';
 import { Notification } from "components/Notification/Notification";
 import { Loader } from "components/Loader/Loader";
+import PropTypes from 'prop-types';
 
 import { nanoid } from "nanoid";
 import { Form, Label, Input } from "./ContactForm.styled"
@@ -14,7 +15,7 @@ export const ContactForm = ({ contact, closeUpdateForm }) => {
   const [name, setName] = useState(contact?.name ?? "");
   const [number, setNumber] = useState(contact?.phone ?? "");
   const [contactId, setContactId] = useState(contact?.id ?? nanoid());
-  
+
   const contacts = useSelector(selectContacts);
   const error = useSelector(selectError);
   const isLoading = useSelector(selectIsLoading);
@@ -115,4 +116,9 @@ export const ContactForm = ({ contact, closeUpdateForm }) => {
 
         </Form>}
     </>)
+}
+
+ContactForm.propTypes = {
+  contact: PropTypes.object,
+  closeUpdateForm: PropTypes.func.isRequired,
 }

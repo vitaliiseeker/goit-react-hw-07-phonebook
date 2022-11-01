@@ -18,7 +18,8 @@ export const Btn = styled.button`
   transition-property: color, background-color;
   transition: var(--animation);
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: #0000ff;
     color: #ffff00;
   } 
