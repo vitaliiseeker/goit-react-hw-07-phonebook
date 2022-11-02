@@ -79,6 +79,11 @@ export const ContactForm = ({ contact, closeUpdateForm }) => {
     setNumber("");
   }
 
+  const onCancel = () => {
+    closeUpdateForm();
+    reset();
+  }
+
   return (
     <>
       {error && <Notification message={error} />}
@@ -111,8 +116,15 @@ export const ContactForm = ({ contact, closeUpdateForm }) => {
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required
           />
-
-          <Button type="submit" children={isUpdateForm ? "Update contact" : "Add contact"}></Button>
+          <div>
+            <Button type="submit" children={isUpdateForm ? "Update contact" : "Add contact"}></Button>
+            {isUpdateForm &&
+              <Button
+                type="button"
+                children="Cancel"
+                onClick={onCancel}
+              />}
+          </div>
 
         </Form>}
     </>)
