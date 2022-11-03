@@ -9,5 +9,5 @@ margin-right: auto;
 padding: 20px;
 
 max-width: 1200px;
-height: 100vh;
+/* height: 100vh; */
 `
