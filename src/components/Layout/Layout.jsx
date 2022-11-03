@@ -18,7 +18,7 @@ export const Layout = () => {
             </Item>
           </List>
           <NavLink
-            href="https://github.com/vitaliiseeker/goit-react-hw-06-phonebook/"
+            href="https://github.com/vitaliiseeker/goit-react-hw-07-phonebook/"
             target="_blank"
             rel="noopener nofollow noreferrer">
             <GithubLogo width="50" height="50" />
